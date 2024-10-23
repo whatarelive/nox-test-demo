@@ -26,7 +26,7 @@ export default function RootLayout({ children }: Props ) {
 
                   <Flex flex={1} direction="column" sx={{ width: 'full' }}>
                     <NavBar/>
-                    { children }
+                      { children }
                     <Footer/>
                   </Flex>
 

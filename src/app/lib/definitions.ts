@@ -4,3 +4,8 @@ export interface Route {
     path: string;
     navIcon: string;
 }
+
+export interface Crumb {
+    name: string;
+    href: string;
+}

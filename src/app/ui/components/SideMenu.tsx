@@ -20,7 +20,7 @@ export function SideMenu() {
                 <Image src={'/logo.png'} alt="Logo" width={162} height={68} />
             </Flex>
 
-            <Flex as='nav'  direction='column' w='229' gap='5' >
+            <Flex as='nav'  direction='column' w='229' gap='10' >
                 <NavList/>
 
                 <Divider w='auto' h='2' color='#EDF2F7' />
