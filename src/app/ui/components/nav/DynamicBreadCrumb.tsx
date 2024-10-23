@@ -28,7 +28,7 @@ export function DynamicBreadCrumb() {
                             href={crumb.href}
                             style={{
                                 fontSize: '16px',
-                                fontWeight: '400',
+                                fontWeight: '600',
                                 lineHeight: '24px',
                                 textAlign: 'center',
                                 color: '#2D3748'

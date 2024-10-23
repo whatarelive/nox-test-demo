@@ -11,7 +11,7 @@ import {
     Avatar
 } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
-import { fonts } from "@/app/ui/fonts/fonts";
+import {fonts} from "@/app/ui/fonts/fonts";
 
 export function ToolBar() {
     return (
@@ -29,16 +29,18 @@ export function ToolBar() {
                     <InputRightElement>
                         <Search2Icon color='gray.300' />
                     </InputRightElement>
-                    <Input type='text' placeholder='Find Client' sx={{
+                    <Input
+                        className={ fonts.inter.className }
+                        placeholder='Find Client'
+                        type='text'
+                        sx={{
                         border: 'none',
                         ':focus': {
                             border: 'transparent',
                             boxShadow: 'none'
-                        },
-                        ':placeholder': {
-                            fontFamily: fonts.inter.className
                         }
-                    }} />
+                    }}
+                    />
                 </InputGroup>
             </form>
 

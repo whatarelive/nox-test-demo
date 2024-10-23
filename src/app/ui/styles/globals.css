@@ -1,6 +1,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-poppins: 'Poppins';
+  --font-inter: Inter;
 }
 
 html, body {
@@ -21,7 +23,12 @@ body {
   margin: 0;
 }
 
-a :hover{
-  text-decoration: none;
-  outline: none;
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  width: 100%;
+  padding: 5px;
+  gap: 10px;
 }

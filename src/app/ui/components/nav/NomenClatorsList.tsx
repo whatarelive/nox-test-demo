@@ -1,7 +1,6 @@
 import { Accordion, Box, List, ListItem, Text } from "@chakra-ui/react";
 import { NomenClatorsItem } from "../nav/NomenClatorsItem";
-
-import mockNomenClators from "../../../lib/data/nomenclators.json";
+import { nomenclators } from "@/app/lib/data/data";
 
 export function NomenClatorsList() {
     return (
@@ -17,7 +16,7 @@ export function NomenClatorsList() {
             <Accordion>
                 <List>
                     {
-                        mockNomenClators.map(({title}) => (
+                        nomenclators.map(({title}) => (
                             <ListItem key={ title }>
                                 <NomenClatorsItem title={ title } />
                             </ListItem>

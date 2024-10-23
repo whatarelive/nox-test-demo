@@ -1,9 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import { fonts } from "./ui/fonts/fonts";
-import { Flex } from "@chakra-ui/react";
 import { Providers } from './providers'
-import { SideMenu, NavBar, Footer } from "./ui/components";
 
 import "./ui/styles/globals.css";
 
@@ -18,19 +16,10 @@ interface Props {
 
 export default function RootLayout({ children }: Props ) {
   return (
-    <html lang="en" className={ fonts.poppins.variable }>
-      <body>
+    <html lang="en" >
+      <body className={`${fonts.poppins.className} `}>
           <Providers>
-              <Flex flex={1} direction="row" sx={{ minHeight: "100vh" }}>
-                  <SideMenu/>
-
-                  <Flex flex={1} direction="column" sx={{ width: 'full' }}>
-                    <NavBar/>
-                      { children }
-                    <Footer/>
-                  </Flex>
-
-              </Flex>
+              { children }
           </Providers>
       </body>
     </html>
