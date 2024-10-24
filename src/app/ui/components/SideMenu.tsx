@@ -9,26 +9,25 @@ export function SideMenu() {
             alignItems='center'
             justifyItems='center'
             sx={{
+                maxHeight: '1020px',
                 width: '289px',
-                maxHeight: '1040px',
                 paddingX: '30px',
-                paddingY: '20px',
+                paddingTop: '20px',
                 gap: '49px',
             }}
-
         >
             <Flex w='229' h='68' placeContent='center'>
                 <Image src={'/logo.png'} alt="Logo" width={162} height={68} />
             </Flex>
 
-            <Flex as='nav' direction='column' w='229' gap='10' px='2' overflowY='auto' sx={{
+            <Flex as='nav' direction='column' w='229px' gap='10px' px='2' overflowY='auto' sx={{
                 '&::-webkit-scrollbar': {
-                    width: '5px', // Ancho del
+                    width: '5px',
                     margin: '10px',
                     backgroundColor: 'transparent', // Fondo del scrollbar
                 },
                 '&::-webkit-scrollbar-thumb': {
-                    backgroundColor: '#f0f0f0', // Color del thumb
+                    backgroundColor: 'transparent', // Color del thumb
                     borderRadius: '1px', // Bordes redondeados
                 },
                 '&::-webkit-scrollbar-track': {
@@ -37,7 +36,7 @@ export function SideMenu() {
             }} >
                     <NavList/>
 
-                    <Divider w='auto' h='2' color='#EDF2F7' />
+                    <Divider w='auto' h='2px' color='#EDF2F7' />
 
                     <NomenClatorsList/>
             </Flex>

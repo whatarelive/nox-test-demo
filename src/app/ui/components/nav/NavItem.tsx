@@ -14,7 +14,7 @@ export function NavItem({ route }: Props) {
     const pathName = usePathname();
     const theme = useTheme();
 
-    const isActive = pathName === route.path;
+    const isActive = pathName.includes(route.path);
 
     return (
         <Link

@@ -7,7 +7,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 
 export function ButtonOrderLayoutFilter() {
     return (
-        <ButtonGroup size='sm' w='116' p='5' isAttached variant='outline' >
+        <ButtonGroup size='sm' w='116px' p='5px' isAttached variant='outline' >
             <IconButton
                 size='md'
                 variant='outline'

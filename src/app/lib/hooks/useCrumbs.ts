@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { Crumb } from "@/app/lib/definitions";
 
 function format(text: string) {
-    return text[0].toUpperCase() + text.slice(1);
+    return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
 export function useCrumbs () {
@@ -14,19 +14,19 @@ export function useCrumbs () {
 
     useEffect(() => {
         // Divide el pathname en partes y crea los elementos del breadcrumb
-        const paths = pathname.split("/");
+        const asPathWithoutQuery = pathname.split("?")[0]
+        const paths = asPathWithoutQuery.split("/").filter(v => v.length > 0);
 
-        paths.shift();
-
-        const newCrumbs = paths.map((value) => {
+        const newCrumbs = paths.map((value, index) => {
             return {
                 name: format(value),
-                href: value
+                href: '/' + paths.slice(0, index + 1).join('/')
             }
         })
 
         setCrumbs([ ...newCrumbs ]);
     }, [pathname]);
+
 
     return {
         crumbs,

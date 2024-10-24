@@ -17,7 +17,7 @@ interface Props {
 export default function RootLayout({ children }: Props ) {
   return (
     <html lang="en" >
-      <body className={`${fonts.poppins.className} `}>
+      <body className={`${fonts.poppins.className}`}>
           <Providers>
               { children }
           </Providers>

@@ -7,17 +7,33 @@ import {
     Text,
     VStack
 } from "@chakra-ui/react";
-import {fonts} from "@/app/ui/fonts/fonts";
 
 export function OrdersViewCardHeader() {
     return (
         <CardHeader sx={{
             display: 'flex',
+            padding: '0',
             flexDirection: 'row'
         }}>
-            <VStack flex='2' alignItems='start' >
-                <Heading as='h3'>Orders</Heading>
-                <Text>Order Summary</Text>
+            <VStack flex='2' alignItems='start' h='54'>
+                <Heading as='h3' sx={{
+                    fontSize: '20px',
+                    fontWeight: '600',
+                    lineHeight: '30px',
+                    textAlign: 'left',
+                    color: '#05004E'
+                }}>
+                    Orders
+                </Heading>
+                <Text sx={{
+                    fontSize: '16px',
+                    fontWeight: '400',
+                    lineHeight: '24px',
+                    textAlign: 'left',
+                    color: '#737791'
+                }}>
+                    Order Summary
+                </Text>
             </VStack>
             <HStack flex='0' p='2.5' gap='10'>
                 <form style={{
@@ -27,47 +43,17 @@ export function OrdersViewCardHeader() {
                 }}>
                     <InputGroup>
                         <Input
-                            className={ fonts.inter.className }
                             variant='outline'
-                            placeholder='1/6/2024'
+                            defaultValue="2024-01-06"
                             size='sm'
                             type='date'
-                            sx={{
-                                width: '205px',
-                                height: '32px',
-                                paddingX: '12px',
-                                borderTopLeftRadius: '4px',
-                                borderBottomLeftRadius: '4px',
-                            }}
-                            _placeholder={{
-                                fontSize: '14px',
-                                fontWeight: '400',
-                                lineHeight: '16.94px',
-                                textAlign: 'left',
-                                color: '#A0AEC0',
-                            }}
                         />
 
                         <Input
-                            className={ fonts.inter.className }
                             variant='outline'
-                            placeholder='7/6/2024'
+                            defaultValue="2024-07-06"
                             size='sm'
                             type='date'
-                            sx={{
-                                width: '205px',
-                                height: '32px',
-                                paddingX: '12px',
-                                borderTopRightRadius: '4px',
-                                borderBottomRightRadius: '4px',
-                            }}
-                            _placeholder={{
-                                fontSize: '14px',
-                                fontWeight: '400',
-                                lineHeight: '16.94px',
-                                textAlign: 'left',
-                                color: '#A0AEC0',
-                            }}
                         />
                     </InputGroup>
                 </form>

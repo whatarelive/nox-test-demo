@@ -1,3 +1,4 @@
+import { LatLngTuple } from "leaflet";
 
 export interface Route {
     label: string;
@@ -22,17 +23,20 @@ export interface Messenger {
 }
 
 interface Contact {
-    phone?: number;
+    phone?: string;
     email?: string;
 }
 
-type Status = 'PENDING' | 'TRANSPORTING' | 'PACKAGING' | 'DELIVERED' |'CANCELED';
+export type Status = 'PENDING' | 'TRANSPORTING' | 'PACKAGING' | 'DELIVERED' |'CANCELED';
 
 export interface Order {
-    orderId: number;
+    orderId: string;
     imageUrl: string;
     nameUser: string;
     products: string[];
     contact: Contact;
     status: Status;
+    position: LatLngTuple;
+    address: string;
+    description: string;
 }
