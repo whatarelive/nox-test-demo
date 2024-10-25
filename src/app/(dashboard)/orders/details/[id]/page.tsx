@@ -21,7 +21,7 @@ interface Props {
     }
 }
 
-export default function OrdersDetailsPage({ params }: Props) {
+export default async function OrdersDetailsPage({ params }: Props) {
     const order = orders.filter((order) => order.orderId === params.id).pop();
     const user = userArray.filter((user) => user.orderId === params.id).pop();
 

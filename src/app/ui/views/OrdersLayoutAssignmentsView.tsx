@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardBody, CardFooter, Text } from "@chakra-ui/react";
-import { ButtonAssign, ListAssignments } from "../components/orders/card";
+import { ButtonAssign, ListAssignments } from "../components/orders";
 
 export function OrdersLayoutAssignmentsView() {
     return (

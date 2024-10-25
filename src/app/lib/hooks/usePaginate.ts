@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+// Hay que mejorar la lógica para trabajar con una lista de elementos
 export function usePaginate() {
     const pages = [1, 2, 3]; // Example
     const [page, setPage] = useState(1)

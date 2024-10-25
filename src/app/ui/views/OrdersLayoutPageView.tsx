@@ -1,6 +1,6 @@
 import React from "react";
-import { OrdersViewCardHeader } from "@/app/ui/components/orders/card";
 import { Card } from "@chakra-ui/react";
+import { OrdersViewCardHeader } from "@/app/ui/components/orders";
 
 interface Props {
     children: React.ReactNode;

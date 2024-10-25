@@ -12,7 +12,7 @@ import {
     Text
 } from "@chakra-ui/react";
 import { Order } from "@/app/lib/definitions";
-import {ButtonAssign} from "@/app/ui/components/orders/card/ButtonAssign";
+import {ButtonAssign} from "@/app/ui/components/buttons/ButtonAssign";
 
 interface Props {
     selectedOrder: Order;

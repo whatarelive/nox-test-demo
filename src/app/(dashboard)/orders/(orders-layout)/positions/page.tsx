@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import { CardBody } from "@chakra-ui/react";
 import OrdersPositionsAssignModal from './assign/page'
 
-const MapView = dynamic(() => import('../../../../ui/components/orders/card/MapView'), {
+const MapView = dynamic(() => import('../../../../ui/components/orders/MapView'), {
     ssr: false,
 })
 

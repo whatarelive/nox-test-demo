@@ -1,5 +1,5 @@
 import React from "react";
-import {type SystemStyleObject, TableContainer} from "@chakra-ui/react";
+import { type SystemStyleObject, TableContainer } from "@chakra-ui/react";
 
 interface Props {
     children: React.ReactNode;

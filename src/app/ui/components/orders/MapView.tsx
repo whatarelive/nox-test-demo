@@ -2,14 +2,14 @@
 
 import React, {useState} from 'react'
 import {Box, Flex} from '@chakra-ui/react'
-import {MapPopoverModal} from "@/app/ui/components/orders/card/MapPopoverModal";
+import {MapPopoverModal} from "@/app/ui/components/orders/MapPopoverModal";
 import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
 import {Icon} from 'leaflet'
 import {orders} from "@/app/lib/data/data";
 import {Order} from "@/app/lib/definitions";
 
 import 'leaflet/dist/leaflet.css';
-import '../MapView.css';
+import './MapView.css';
 
 export default function MapView() {
     // Ejemplo usando useState, posteriorme se migrara a Redux o Zustand.

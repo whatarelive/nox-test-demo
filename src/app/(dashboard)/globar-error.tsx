@@ -9,7 +9,7 @@ interface Props {
     reset: () => void
 }
 
-export default function ErrorId({ error }: Props) {
+export default function ErrorPage({ error }: Props) {
     const router = useRouter();
 
     useEffect(() => {

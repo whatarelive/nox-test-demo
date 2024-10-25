@@ -7,7 +7,7 @@ import {
     FormControl,
     FormLabel
 } from "@chakra-ui/react";
-import {UserOrder} from "@/app/lib/definitions";
+import { UserOrder } from "@/app/lib/definitions";
 
 const textStyle = {
     fontSize: '16px',

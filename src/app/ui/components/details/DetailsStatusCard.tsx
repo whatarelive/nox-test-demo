@@ -1,8 +1,8 @@
-import {Card, CardBody, CardHeader, Flex, Text, Thead, Tbody, Tr, Td, Th, Table} from "@chakra-ui/react";
-import {Status} from "@/app/lib/definitions";
-import {TableOrderBagde} from "@/app/ui/components/orders/card";
-import {ButtonChangeStatus} from "@/app/ui/components/buttons/ButtonChangeStatus";
-import {TableScrollContainer} from "@/app/ui/components";
+import { Card, CardBody, CardHeader, Flex, Text, Thead, Tbody, Tr, Td, Th, Table } from "@chakra-ui/react";
+import { TableOrderBagde } from "@/app/ui/components/orders";
+import { ButtonChangeStatus } from "@/app/ui/components/buttons/ButtonChangeStatus";
+import { TableScrollContainer } from "@/app/ui/components";
+import { Status } from "@/app/lib/definitions";
 
 interface Props {
     data: {

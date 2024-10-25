@@ -1,5 +1,5 @@
-import {Card, CardBody, CardHeader, Flex, Text, Thead, Tbody, Tr, Td, Th, Table, Image } from "@chakra-ui/react";
-import {TableScrollContainer} from "@/app/ui/components";
+import { Card, CardBody, CardHeader, Flex, Text, Thead, Tbody, Tr, Td, Th, Table, Image } from "@chakra-ui/react";
+import { TableScrollContainer } from "@/app/ui/components";
 
 interface Props {
     products: string[];

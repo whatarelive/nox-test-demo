@@ -1,6 +1,6 @@
 import { Avatar, Flex, Table, Tbody, Td, Text, Tr } from "@chakra-ui/react";
-import { messengers } from "@/app/lib/data/data";
 import { TableScrollContainer } from "@/app/ui/components";
+import { messengers } from "@/app/lib/data/data";
 
 export function ListAssignments() {
     return (

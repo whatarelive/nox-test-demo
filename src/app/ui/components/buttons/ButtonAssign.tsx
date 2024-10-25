@@ -36,6 +36,8 @@ export function ButtonAssign({ title }: Props) {
                 fontSize: isTitleAssign ? '14px' : '16px',
                 lineHeight: isTitleAssign ? '16px' : '24px'
             }}
+            _hover={{ transform: 'translateY(-1px)', boxShadow: 'md' }}
+            transition="all 0.2s"
             onClick={ handleClick }
         >
             { title }

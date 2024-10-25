@@ -1,5 +1,5 @@
 import { Badge, Stack } from "@chakra-ui/react";
-import { ButtonOrderLayoutFilter } from "@/app/ui/components";
+import { ButtonOrderLayoutFilter } from "@/app/ui/components/buttons";
 
 export function OrdersLayoutBadgeView() {
     return (

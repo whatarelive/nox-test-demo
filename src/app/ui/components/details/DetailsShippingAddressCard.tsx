@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
-import { Card, CardBody, CardHeader, Text, Textarea, Flex } from "@chakra-ui/react";
-import { ButtonAssign } from "@/app/ui/components/orders/card";
 import { LatLngTuple } from "leaflet";
+import { Card, CardBody, CardHeader, Text, Textarea, Flex } from "@chakra-ui/react";
+import { ButtonAssign } from "@/app/ui/components/orders";
 
 const MapView = dynamic(() => import('../details/DetailsMap'), {
     ssr: false,
