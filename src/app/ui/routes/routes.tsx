@@ -22,7 +22,7 @@ export const routes: Route[]  = [{
     navIcon: '/svg/notifications.svg',
 },{
     label: 'Roulette Game',
-    path: '/roulettegame',
+    path: '/roulette-game',
     navIcon: '/svg/roulettegame.svg',
 },{
     label: 'Inventaries',

@@ -22,14 +22,14 @@ export default function RootLayout({ children }: Props ) {
       <body className={`${fonts.poppins.className}`}>
           <Providers>
               <Grid
-                  width="100vw"
+                  maxWidth="100vw"
                   maxH='100vh'
                   gap='0'
                   templateAreas={`"nav page"`}
-                  gridTemplateColumns={'auto auto'}
+                  gridTemplateColumns={{ base: 'auto auto', md: '280px auto' }}
               >
                   <GridItem
-                      w={{ base: '0px', md: '280px' }}
+                      maxW={{ base: '0px', md: '280px' }}
                       display={{ base: 'none', md: 'flex' }} area={'nav'}
                   >
                       <SideMenu/>

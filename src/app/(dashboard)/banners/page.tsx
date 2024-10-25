@@ -1,5 +1,7 @@
+import NotFound from "@/app/(dashboard)/not-found";
+
 export default function BannersPage() {
     return (
-        <h1>Estamos en <b>Banners Page</b></h1>
+        <NotFound></NotFound>
     )
 }

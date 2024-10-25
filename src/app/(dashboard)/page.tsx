@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Box, Container, Heading, Text, VStack, HStack, Link as ChakraLink } from '@chakra-ui/react'
+import Link from "next/link";
 
 export default function DashBoard() {
     return (
@@ -66,6 +67,38 @@ export default function DashBoard() {
                             <Image src='/nextjs-icon-svgrepo-com.svg' alt='Icono de Next js' width={64} height={64}/>
                             <Image src='/chakraUi.svg' alt='Icono de Chakra Ui' width={64} height={64}/>
                             <Image src='/typescript-svgrepo-com.svg' alt='Icono de TypeScript' width={64} height={64}/>
+                        </HStack>
+                    </Box>
+
+                    <Box bg='gray.100' p={8} borderRadius="lg" boxShadow="md">
+                        <HStack spacing={6}>
+                            <VStack direction='column' spacing={3} alignItems="start" >
+                                <VStack >
+                                    <Heading as="h1" size="lg">Nota</Heading>
+                                </VStack>
+                                <VStack>
+                                    <Text>
+                                        La interfaz actual fue creada basandose en el diseño dado,
+                                        por lo tanto no esta adaptado completamente a resoluciones móviles.
+                                    </Text>
+                                </VStack>
+                            </VStack>
+                        </HStack>
+                    </Box>
+
+                    <Box bg='gray.100' p={8} borderRadius="lg" boxShadow="md">
+                        <HStack spacing={6} align="start">
+                            <VStack direction='column' alignItems='start' spacing={3}>
+                                <VStack alignItems='start'>
+                                    <Heading as="h1" size="lg">Rutas</Heading>
+                                </VStack>
+                                <VStack alignItems='start'>
+                                    <ChakraLink as={ Link } href='/orders/list'> Orders/list </ChakraLink>
+                                    <ChakraLink as={ Link } href='/orders/positions'> Orders/positions </ChakraLink>
+                                    <ChakraLink as={ Link } href='/orders/positions?modal=true'> Orders/positions/assign </ChakraLink>
+                                    <ChakraLink as={ Link } href='/orders/details/O-4516'> Orders/details </ChakraLink>
+                                </VStack>
+                            </VStack>
                         </HStack>
                     </Box>
                 </VStack>
