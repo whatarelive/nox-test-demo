@@ -1,6 +1,6 @@
 export default function DashBoard() {
   return (
-    <div style={{ background: "blue" }}>
+    <div>
       <h1>Hola</h1>
     </div>
   );

@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Box, Flex } from "@chakra-ui/react";
 import {
     DetailsProductsCard,
@@ -5,6 +6,13 @@ import {
     DetailsStatusCard,
     DetailsUserCard
 } from "@/app/ui/components/details";
+import {
+    SkeletonProductsCard,
+    SkeletonShippingCard,
+    SkeletonStatusCard,
+    SkeletonUserCard
+} from "@/app/ui/skeletons";
+
 import {orders, userArray} from "@/app/lib/data/data";
 
 interface Props {
@@ -28,26 +36,34 @@ export default function OrdersDetailsPage({ params }: Props) {
         }} >
             <Flex direction={{ base: 'column', lg: 'row' }} gap='40px'>
                 <Box flex='2'>
-                    <DetailsUserCard user={user}/>
+                    <Suspense fallback={ <SkeletonUserCard/> }>
+                        <DetailsUserCard user={user}/>
+                    </Suspense>
                 </Box>
                 <Box flex='1'>
-                    <DetailsShippingAddressCard position={order.position} textAreaValue={order.address}/>
+                    <Suspense fallback={ <SkeletonShippingCard/> }>
+                        <DetailsShippingAddressCard position={order.position} textAreaValue={order.address}/>
+                    </Suspense>
                 </Box>
             </Flex>
 
             <Flex direction={{ base: 'column', lg: 'row' }} gap='40px'>
                 <Box flex='1'>
-                    <DetailsProductsCard products={order.products} />
+                    <Suspense fallback={ <SkeletonProductsCard/> }>
+                        <DetailsProductsCard products={order.products} />
+                    </Suspense>
                 </Box>
                 <Box flex='1'>
-                    <DetailsStatusCard
-                        data={
-                            [
-                                { date: '16/10/2024 10:45:20', status: order.status },
-                                { date: '15/10/2024 08:30:13', status: 'DELIVERED' }
-                            ]
-                        }
-                    />
+                    <Suspense fallback={ <SkeletonStatusCard/> }>
+                        <DetailsStatusCard
+                            data={
+                                [
+                                    { date: '16/10/2024 10:45:20', status: order.status },
+                                    { date: '15/10/2024 08:30:13', status: 'DELIVERED' }
+                                ]
+                            }
+                        />
+                    </Suspense>
                 </Box>
             </Flex>
         </Flex>

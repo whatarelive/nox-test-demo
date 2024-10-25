@@ -26,7 +26,7 @@ export default function RootLayout({ children }: Props ) {
                   maxH='100vh'
                   gap='0'
                   templateAreas={`"nav page"`}
-                  gridTemplateColumns={'auto auto'}
+                  gridTemplateColumns={'280px auto'}
               >
                   <GridItem w='280px' display={{ base: 'none', md: 'flex' }} area={'nav'}>
                       <SideMenu/>

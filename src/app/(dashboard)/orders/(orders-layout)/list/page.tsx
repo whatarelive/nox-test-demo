@@ -1,10 +1,12 @@
+import { Suspense } from "react";
 import { CardBody, CardFooter } from "@chakra-ui/react";
 import { FilterTable, Pagination, TableOrder } from "@/app/ui/components/orders/card";
 import { TableScrollContainer } from "@/app/ui/components";
+import { SkeletonOrdersListCard } from "@/app/ui/skeletons";
 
 export default function OrdersListPage() {
     return (
-         <>
+         <Suspense fallback={ <SkeletonOrdersListCard/> }>
             <CardBody px='0' py='10px' gap='30px'>
                 <FilterTable/>
 
@@ -21,6 +23,6 @@ export default function OrdersListPage() {
             <CardFooter flex='1' px='10px' py='12px' gap='10px'>
                 <Pagination/>
             </CardFooter>
-         </>
+         </Suspense>
     )
 }
