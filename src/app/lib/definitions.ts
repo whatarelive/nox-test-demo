@@ -40,3 +40,14 @@ export interface Order {
     address: string;
     description: string;
 }
+
+export interface UserOrder {
+    userId: number;
+    orderId: string;
+    userName: string;
+    firstName: string;
+    lastName: string;
+    identityCard: string;
+    phone: string;
+    email: string;
+}

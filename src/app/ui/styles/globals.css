@@ -7,7 +7,9 @@
 
 html {
   max-width: 100vw;
+  max-height: 100vh;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {
@@ -27,10 +29,10 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #F9FAF8;
   height: 38px;
   width: 100%;
   padding: 5px;
-  gap: 10px;
 }
 
 input[type='date'] {

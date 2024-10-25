@@ -4,7 +4,7 @@ import { NavItem } from './NavItem'
 
 export function NavList() {
     return (
-        <List h='fit-content' gap='5' >
+        <List gap='5' >
             {
                 routes.map(route => (
                     <ListItem key={ route.label }>

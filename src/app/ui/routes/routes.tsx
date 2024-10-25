@@ -2,11 +2,11 @@ import { Route } from "../../lib/definitions";
 
 export const routes: Route[]  = [{
     label: 'Dashboard',
-    path: '/dashboard',
+    path: '/',
     navIcon: '/svg/dashboard.svg',
 },{
     label: 'Orders',
-    path: '/orders',
+    path: '/orders/list',
     navIcon: '/svg/orders.svg',
 },{
     label: 'Banners',
@@ -22,10 +22,10 @@ export const routes: Route[]  = [{
     navIcon: '/svg/notifications.svg',
 },{
     label: 'Roulette Game',
-    path: '/roulette-game',
+    path: '/roulettegame',
     navIcon: '/svg/roulettegame.svg',
 },{
-    label: 'Invetaries',
+    label: 'Inventaries',
     path: '/inventaries',
     navIcon: '/svg/inventaries.svg',
 },{

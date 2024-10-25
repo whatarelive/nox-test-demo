@@ -1,16 +1,15 @@
 import Image from "next/image";
-import {Flex, Divider } from "@chakra-ui/react";
+import { Flex, Divider } from "@chakra-ui/react";
 import { NavList, NomenClatorsList } from "./nav";
 
 export function SideMenu() {
     return (
         <Flex
+            maxH="100vh"
             flexDirection='column'
             alignItems='center'
             justifyItems='center'
             sx={{
-                maxHeight: '1020px',
-                width: '289px',
                 paddingX: '30px',
                 paddingTop: '20px',
                 gap: '49px',
@@ -20,25 +19,20 @@ export function SideMenu() {
                 <Image src={'/logo.png'} alt="Logo" width={162} height={68} />
             </Flex>
 
-            <Flex as='nav' direction='column' w='229px' gap='10px' px='2' overflowY='auto' sx={{
+            <Flex as='nav' h='inherit' direction='column' gap='10px' overflowY='auto' sx={{
                 '&::-webkit-scrollbar': {
-                    width: '5px',
-                    margin: '10px',
                     backgroundColor: 'transparent', // Fondo del scrollbar
                 },
                 '&::-webkit-scrollbar-thumb': {
                     backgroundColor: 'transparent', // Color del thumb
-                    borderRadius: '1px', // Bordes redondeados
                 },
                 '&::-webkit-scrollbar-track': {
                     backgroundColor: 'transparent', // Fondo del track
                 },
             }} >
-                    <NavList/>
-
-                    <Divider w='auto' h='2px' color='#EDF2F7' />
-
-                    <NomenClatorsList/>
+                <NavList/>
+                <Divider w='auto' h='2px' color='#EDF2F7' />
+                <NomenClatorsList/>
             </Flex>
         </Flex>
     )

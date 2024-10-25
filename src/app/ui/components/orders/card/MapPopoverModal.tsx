@@ -12,6 +12,7 @@ import {
     Text
 } from "@chakra-ui/react";
 import { Order } from "@/app/lib/definitions";
+import {ButtonAssign} from "@/app/ui/components/orders/card/ButtonAssign";
 
 interface Props {
     selectedOrder: Order;
@@ -42,41 +43,27 @@ export function MapPopoverModal({ selectedOrder }: Props) {
                     </Text>
                 </PopoverBody>
                 <PopoverFooter border='none'>
-                    <HStack justifyItems="space-between" gap='10px'>
+                    <HStack flex='1' justifyContent="space-between">
                         <Button
-                            size="sm"
-                            colorScheme="blue"
+                            size="md"
+                            flex='1'
+                            colorScheme="orange"
                             variant="outline"
                             w='109px'
                             sx={{
-                            paddingX: '12px',
-                            borderRadius: '16px',
-                            fontSize: '14px',
-                            fontWeight: '500',
-                            lineHeight: '20px',
-                            borderColor: '#FF7500',
-                            color: '#FF7500'
-                        }}
-                            onClick={() => router.push('/orders/details')}
+                                paddingX: '12px',
+                                borderRadius: '16px',
+                                fontSize: '14px',
+                                fontWeight: '500',
+                                lineHeight: '20px',
+                                borderColor: '#FF7500',
+                                color: '#FF7500'
+                            }}
+                            onClick={() => router.push(`/orders/details/${selectedOrder.orderId}`)}
                         >
                             View Details
                         </Button>
-                        <Button
-                            w='109px'
-                            size="sm"
-                            colorScheme="blue"
-                            variant="solid"
-                            sx={{
-                            borderRadius: '16px',
-                            fontSize: '14px',
-                            fontWeight: '500',
-                            lineHeight: '20px',
-                            bg: '#FF7500',
-                        }}
-                            onClick={() => router.push('/orders/positions/assign')}
-                        >
-                            Assign
-                        </Button>
+                        <ButtonAssign title='Assign'/>
                     </HStack>
                 </PopoverFooter>
             </PopoverContent>

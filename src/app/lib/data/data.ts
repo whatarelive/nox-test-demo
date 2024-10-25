@@ -1,4 +1,4 @@
-import {Messenger, NomenClator, Order} from "@/app/lib/definitions";
+import {Messenger, NomenClator, Order, UserOrder} from "@/app/lib/definitions";
 
 export const messengers: Messenger[] = [{
     id: 1,
@@ -44,3 +44,13 @@ export const orders: Order[] = [
     { orderId: 'O-4525', imageUrl: "https://bit.ly/broken-link", position: [23.195, -82.293], address: 'Calle 10 #567, San Miguel del Padrón', description: 'Order 4525', nameUser: "Julia Red", products: ["Product O"], contact: { phone: "+53 53652184" }, status: "CANCELED" },
 ];
 
+export const userArray: UserOrder[] = [{
+    userId: 1,
+    orderId: 'O-4516',
+    userName: 'rolando',
+    firstName: 'Rolando',
+    lastName: 'Fonseca Martínez',
+    identityCard: '8502034587',
+    phone: '+53 57412369',
+    email: 'rolando@gmail.com',
+}]

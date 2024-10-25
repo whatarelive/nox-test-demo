@@ -1,1 +1,1 @@
-export { AssignmentsView } from './AssignmentsView';
+export { OrdersLayoutAssignmentsView } from '../../views/OrdersLayoutAssignmentsView';

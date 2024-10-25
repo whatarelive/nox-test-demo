@@ -18,6 +18,7 @@ export function ButtonOrderLayoutFilter() {
                 size='md'
                 variant='outline'
                 aria-label='Location'
+                bg='#EDF2F7'
                 icon={ <Image src='/svg/location.svg' alt='Icon location' width='14' height='14'/> }
             />
         </ButtonGroup>

@@ -11,10 +11,12 @@ interface Props {
 }
 
 export function NavItem({ route }: Props) {
-    const pathName = usePathname();
+    const pathname = usePathname();
     const theme = useTheme();
 
-    const isActive = pathName.includes(route.path);
+    const isActive = pathname.includes('orders')
+        ? route.path.includes('orders')
+        : pathname === route.path;
 
     return (
         <Link
@@ -50,7 +52,6 @@ export function NavItem({ route }: Props) {
                         filter: isActive
                             ? 'invert(43%) sepia(88%) saturate(4229%) hue-rotate(358deg) brightness(99%) contrast(102%)'
                             : ''
-
                     }}
                 />
                 { route.label }

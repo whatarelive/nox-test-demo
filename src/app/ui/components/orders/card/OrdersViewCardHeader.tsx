@@ -1,6 +1,5 @@
 import {
     CardHeader,
-    Heading,
     HStack,
     Input,
     InputGroup,
@@ -15,8 +14,8 @@ export function OrdersViewCardHeader() {
             padding: '0',
             flexDirection: 'row'
         }}>
-            <VStack flex='2' alignItems='start' h='54'>
-                <Heading as='h3' sx={{
+            <VStack flex='2' alignItems='start' >
+                <Text sx={{
                     fontSize: '20px',
                     fontWeight: '600',
                     lineHeight: '30px',
@@ -24,7 +23,7 @@ export function OrdersViewCardHeader() {
                     color: '#05004E'
                 }}>
                     Orders
-                </Heading>
+                </Text>
                 <Text sx={{
                     fontSize: '16px',
                     fontWeight: '400',
@@ -35,7 +34,8 @@ export function OrdersViewCardHeader() {
                     Order Summary
                 </Text>
             </VStack>
-            <HStack flex='0' p='2.5' gap='10'>
+
+            <HStack flex='0' p='5px' gap='10px'>
                 <form style={{
                     gap: '10px',
                     borderRadius: '4px',

@@ -4,10 +4,6 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Crumb } from "@/app/lib/definitions";
 
-function format(text: string) {
-    return text.charAt(0).toUpperCase() + text.slice(1);
-}
-
 export function useCrumbs () {
     const pathname = usePathname();
     const [ crumbs, setCrumbs] = useState<Crumb[]>([]);
@@ -17,19 +13,36 @@ export function useCrumbs () {
         const asPathWithoutQuery = pathname.split("?")[0]
         const paths = asPathWithoutQuery.split("/").filter(v => v.length > 0);
 
+        // creación del arreglo de crumbs.
         const newCrumbs = paths.map((value, index) => {
             return {
-                name: format(value),
+                name: value.charAt(0).toUpperCase() + value.slice(1),
                 href: '/' + paths.slice(0, index + 1).join('/')
             }
         })
 
-        setCrumbs([ ...newCrumbs ]);
+        let initial = newCrumbs[0];
+
+        if( initial?.name === 'Orders' ) {
+            initial.href = `${initial.href}/list`
+        }
+
+        if ( newCrumbs.length > 1 && newCrumbs[1].name === 'Details' ) {
+            newCrumbs[1].href = `/orders/details/${newCrumbs[2].name}`
+        }
+
+        if ( initial ) {
+            return setCrumbs([...newCrumbs ]);
+        }
+
+        if ( initial === undefined ) {
+            initial = { name: 'Dashboard', href: '/' }
+            return setCrumbs([ initial ]);
+        }
+
     }, [pathname]);
 
-
     return {
-        crumbs,
-        initial: format(pathname.split('/')[1]),
+        crumbs
     };
 }

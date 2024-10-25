@@ -1,25 +1,28 @@
-import { Card, CardHeader, CardBody, CardFooter, Text, Heading } from "@chakra-ui/react";
-import { ButtonAssign, ListAssignments } from "./card";
+import { Card, CardHeader, CardBody, CardFooter, Text } from "@chakra-ui/react";
+import { ButtonAssign, ListAssignments } from "../components/orders/card";
 
-export function AssignmentsView() {
+export function OrdersLayoutAssignmentsView() {
     return (
-        <Card flex='1' sx={{
-                minWidth: '317px',
-                maxWidth: 'fit-content',
+        <Card
+            flex='1'
+            display='flex'
+            sx={{
                 borderRadius: '20px',
                 paddingX: '35px',
                 paddingY: '30px',
-                gap: '10px'
-            }}>
+            }}
+            gap={{ base: '30px', lg: '10px' }}
+            maxW={{ base: 'full', lg: '317px' }}
+        >
             <CardHeader p='0' >
-                <Heading as='h4' sx={{
+                <Text sx={{
                     fontWeight: '600',
                     fontSize: '20px',
                     lineHeight: '30px',
                     color: '#05004E'
                 }}>
                     Assignments
-                </Heading>
+                </Text>
                 <Text sx={{
                     fontWeight: '400',
                     fontSize: '16px',
@@ -29,10 +32,12 @@ export function AssignmentsView() {
                     Assignments to messengers
                 </Text>
             </CardHeader>
+
             <CardBody p='0'>
                 <ListAssignments/>
             </CardBody>
-            <CardFooter p='0'>
+
+            <CardFooter w={{ base: '250px', lg: 'full' }} alignSelf='center' p='0'>
                 <ButtonAssign title='Assign All'/>
             </CardFooter>
         </Card>
