@@ -26,9 +26,12 @@ export default function RootLayout({ children }: Props ) {
                   maxH='100vh'
                   gap='0'
                   templateAreas={`"nav page"`}
-                  gridTemplateColumns={'280px auto'}
+                  gridTemplateColumns={'auto auto'}
               >
-                  <GridItem w='280px' display={{ base: 'none', md: 'flex' }} area={'nav'}>
+                  <GridItem
+                      w={{ base: '0px', md: '280px' }}
+                      display={{ base: 'none', md: 'flex' }} area={'nav'}
+                  >
                       <SideMenu/>
                   </GridItem>
                   <GridItem area={'page'} overflowY='auto' sx={{
@@ -52,7 +55,7 @@ export default function RootLayout({ children }: Props ) {
                             <NavBar/>
                           </GridItem>
 
-                          <GridItem area={'main'}>
+                          <GridItem as='main' area={'main'}>
                             { children }
                           </GridItem>
 

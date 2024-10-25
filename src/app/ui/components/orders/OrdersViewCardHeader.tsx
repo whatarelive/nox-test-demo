@@ -43,6 +43,7 @@ export function OrdersViewCardHeader() {
                 }}>
                     <InputGroup>
                         <Input
+                            name='initial-date'
                             variant='outline'
                             defaultValue="2024-01-06"
                             size='sm'
@@ -50,6 +51,7 @@ export function OrdersViewCardHeader() {
                         />
 
                         <Input
+                            name='final-date'
                             variant='outline'
                             defaultValue="2024-07-06"
                             size='sm'
