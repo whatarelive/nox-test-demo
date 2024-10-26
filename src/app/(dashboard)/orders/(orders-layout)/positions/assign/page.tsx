@@ -64,7 +64,10 @@ export default function OrdersPositionsAssignModal() {
                             fontWeight: '400',
                             lineHeight: '20px',
                         }}
-                        onClick={() => alert(`Assign To: ${select}`)}
+                        onClick={() => {
+                            alert(`Assign To: ${select}`)
+                            router.back();
+                        }}
                     >
                         Assign To
                     </Button>
