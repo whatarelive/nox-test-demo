@@ -1,8 +1,8 @@
 'use client'
 
-import { Box, Button, Container, Heading, Text, VStack } from '@chakra-ui/react'
-import { useEffect } from 'react'
-import { useRouter } from "next/navigation";
+import { useEffect } from 'react';
+import { Box, Container, Heading, Text, VStack } from '@chakra-ui/react';
+import { ButtonNotFoundBack } from "@/app/ui/components/buttons";
 
 interface Props {
     error: Error & { digest?: string }
@@ -10,7 +10,6 @@ interface Props {
 }
 
 export default function ErrorPage({ error }: Props) {
-    const router = useRouter();
 
     useEffect(() => {
         console.error(error)
@@ -35,16 +34,7 @@ export default function ErrorPage({ error }: Props) {
                         <Text fontWeight='bold'>Actualmente en desarrollo</Text>
                         <Text fontFamily="monospace">{ error.message || 'Error desconocido'}</Text>
                     </Box>
-                    <Button
-                        colorScheme="blue"
-                        bg='#FF7500'
-                        size="lg"
-                        onClick={() => router.back()}
-                        _hover={{ transform: 'translateY(-2px)', boxShadow: 'lg' }}
-                        transition="all 0.2s"
-                    >
-                        Volver atras
-                    </Button>
+                    <ButtonNotFoundBack/>
                 </VStack>
             </Container>
         </Box>

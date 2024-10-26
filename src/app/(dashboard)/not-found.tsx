@@ -1,4 +1,5 @@
-import { Box, Button, Container, Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Container, Heading, Text, VStack } from "@chakra-ui/react";
+import { ButtonNotFoundBack } from "@/app/ui/components/buttons";
 
 export default function NotFound() {
     return (
@@ -9,15 +10,7 @@ export default function NotFound() {
                         404
                     </Heading>
                     <Text size='lg' fontWeight='bold'>Módulo en desarrollo</Text>
-                    <Button
-                        colorScheme="blue"
-                        bg='#FF7500'
-                        size="lg"
-                        _hover={{ transform: 'translateY(-2px)', boxShadow: 'lg' }}
-                        transition="all 0.2s"
-                    >
-                        Volver atras
-                    </Button>
+                    <ButtonNotFoundBack/>
                 </VStack>
             </Container>
         </Box>
