@@ -1,7 +1,7 @@
 'use client';
 
 import { useSearchParams } from "next/navigation";
-import {Flex, GridItem} from "@chakra-ui/react";
+import { Flex, GridItem } from "@chakra-ui/react";
 import { SideMenu } from "@/app/ui/components/SideMenu";
 import { ButtonOpenDrawer } from "@/app/ui/components/buttons";
 

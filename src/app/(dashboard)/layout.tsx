@@ -1,8 +1,9 @@
-import React from "react";
+import React, { Suspense } from "react";
 import type { Metadata } from "next";
 import { fonts } from "../ui/fonts/fonts";
 import { Grid, GridItem } from "@chakra-ui/react";
 import { Footer, NavBar, SideMenu, SideMenuMobile } from "@/app/ui/components";
+import { SkeletonSideMenuMobile } from "@/app/ui/skeletons";
 import { Providers } from './providers'
 
 import "../ui/styles/globals.css";
@@ -35,7 +36,9 @@ export default function RootLayout({ children }: Props ) {
                       <SideMenu/>
                   </GridItem>
 
-                  <SideMenuMobile/>
+                  <Suspense fallback={ <SkeletonSideMenuMobile/> }>
+                    <SideMenuMobile/>
+                  </Suspense>
 
                   <GridItem area={'page'} overflowY='auto' sx={{
                       '&::-webkit-scrollbar': {

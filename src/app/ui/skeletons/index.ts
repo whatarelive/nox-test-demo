@@ -4,3 +4,4 @@ export { SkeletonShippingCard } from './SkeletonShippingCard';
 export { SkeletonUserCard } from './SkeletonUserCard';
 export { SkeletonProductsCard } from './SkeletonProductsCard';
 export { SkeletonStatusCard } from './SkeletonStatusCard';
+export { SkeletonSideMenuMobile } from './SkeletonSideMenuMobile';
