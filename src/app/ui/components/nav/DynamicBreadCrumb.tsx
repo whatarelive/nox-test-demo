@@ -8,7 +8,11 @@ import { useCrumbs } from "@/app/lib/hooks/useCrumbs";
 export function DynamicBreadCrumb() {
     const { crumbs } = useCrumbs();
     return (
-        <Breadcrumb spacing='8px' separator={ <ChevronRightIcon color='#1A202C' /> } >
+        <Breadcrumb
+            spacing='8px'
+            display={{ base: 'none', md: 'flex' }}
+            separator={ <ChevronRightIcon color='#1A202C' /> }
+        >
             {
                 crumbs.map((crumb, index) => (
                     <BreadcrumbItem  w='54' h='24' key={index} isCurrentPage={ index === crumbs.length - 1 }>

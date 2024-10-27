@@ -29,10 +29,11 @@ export default async function OrdersDetailsPage({ params }: Props) {
 
     return (
         <Flex flex='1' direction={{ base: 'column' }} sx={{
-            p: '60px',
+            py: '60px',
+            px:{ base: '10px', md: '60px' },
             gap: '20px',
             bg: '#F9FAF8',
-            borderTopLeftRadius: '50px'
+            borderTopLeftRadius: { md: '50px' }
         }} >
             <Flex direction={{ base: 'column', lg: 'row' }} gap='40px'>
                 <Box flex='2'>

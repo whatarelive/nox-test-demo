@@ -13,6 +13,7 @@ export function TableScrollContainer({ children, sx}: Props) {
             overflowY: 'scroll',
             '&::-webkit-scrollbar': {
                 width: '5px',
+                height: '0px',
                 backgroundColor: 'transparent', // Fondo del scrollbar
             },
             '&::-webkit-scrollbar-thumb': {

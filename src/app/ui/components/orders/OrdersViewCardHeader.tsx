@@ -11,10 +11,10 @@ export function OrdersViewCardHeader() {
     return (
         <CardHeader sx={{
             display: 'flex',
+            alignItems: 'center',
             padding: '0',
-            flexDirection: 'row'
         }}>
-            <VStack flex='2' alignItems='start' >
+            <VStack flex={{ base:'1', md:'2' }} alignItems='start' >
                 <Text sx={{
                     fontSize: '20px',
                     fontWeight: '600',
@@ -35,17 +35,21 @@ export function OrdersViewCardHeader() {
                 </Text>
             </VStack>
 
-            <HStack flex='0' p='5px' gap='10px'>
+            <HStack flex='0' p={{ md: '5px' }} >
                 <form style={{
                     gap: '10px',
                     borderRadius: '4px',
                     border: '1px solid #E2E8F0',
                 }}>
-                    <InputGroup>
+                    <InputGroup sx={{
+                        display:'flex',
+                        flexDirection:{ base: 'column', md: 'row' }
+                    }}>
                         <Input
                             name='initial-date'
                             variant='outline'
                             defaultValue="2024-01-06"
+                            maxW={{ base: '150px', md: 'full' }}
                             size='sm'
                             type='date'
                         />
@@ -54,6 +58,7 @@ export function OrdersViewCardHeader() {
                             name='final-date'
                             variant='outline'
                             defaultValue="2024-07-06"
+                            maxW={{ base: '150px', md: 'full' }}
                             size='sm'
                             type='date'
                         />

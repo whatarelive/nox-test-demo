@@ -20,7 +20,7 @@ export default function OrdersPositionsPage({ searchParams }: Props) {
             <CardBody px='0' py='10px' gap='20'>
                 <MapView/>
             </CardBody>
-            { show && <OrdersPositionsAssignModal/>}
+            { show && <OrdersPositionsAssignModal/> }
         </>
     )
 }

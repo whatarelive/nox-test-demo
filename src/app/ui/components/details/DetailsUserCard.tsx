@@ -23,7 +23,7 @@ interface Props {
 
 export function DetailsUserCard({ user }: Props) {
     return (
-        <Card maxH='515px' px='35px' py='30px' gap='5px' borderRadius='20px'>
+        <Card px='35px' py='30px' gap='5px' borderRadius='20px'>
             <CardHeader p='0'>
                 <Text sx={{
                     fontSize: '20px',
@@ -54,11 +54,12 @@ export function DetailsUserCard({ user }: Props) {
                             <Input name='username' value={ user.userName } isReadOnly />
                         </FormControl>
 
-                        <Flex gap='20px'>
+                        <Flex sx={{
+                            flexDirection:{ base: 'column', md: 'row' },
+                            gap:{ base: '10px', md:'20px' }
+                        }}>
                             <FormControl py='10px' gap='10px'>
-                                <FormLabel sx={textStyle}>
-                                    Firstname
-                                </FormLabel>
+                                <FormLabel sx={textStyle}>Firstname</FormLabel>
                                 <Input name='firstname' value={ user.firstName } isReadOnly />
                             </FormControl>
 
@@ -73,7 +74,10 @@ export function DetailsUserCard({ user }: Props) {
                             <Input name='identityCard' value={ user.identityCard } isReadOnly />
                         </FormControl>
 
-                        <Flex gap='20px'>
+                        <Flex sx={{
+                            flexDirection:{ base: 'column', md: 'row' },
+                            gap:{ base: '10px', md:'20px' }
+                        }}>
                             <FormControl py='10px' gap='10px'>
                                 <FormLabel sx={textStyle} >Phone Number</FormLabel>
                                 <Input name='phone' value={ user.phone } isReadOnly />

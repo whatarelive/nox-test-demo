@@ -3,7 +3,7 @@
 import React from 'react'
 import { Box } from '@chakra-ui/react'
 import { MapContainer, TileLayer, Marker } from 'react-leaflet'
-import {Icon, LatLngTuple} from 'leaflet'
+import { Icon, LatLngTuple } from 'leaflet'
 
 import 'leaflet/dist/leaflet.css';
 
@@ -13,7 +13,7 @@ interface Props {
 
 export default function DetailsMap({ position }: Props) {
     return (
-        <Box height='282px' bg='red'>
+        <Box height='282px' >
             <MapContainer
                 center={[...position]}
                 zoom={13}

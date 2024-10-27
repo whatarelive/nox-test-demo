@@ -27,7 +27,13 @@ export function Pagination() {
                 <ArrowBackIcon/>
                 Preview
             </Button>
-            <HStack flex='1' gap='10px' alignItems='center' justifyContent='center'>
+            <HStack sx={{
+                flex:'1',
+                gap:'10px',
+                display: { base: 'none', md: 'flex' },
+                alignItems:'center',
+                justifyContent:'center'
+            }}>
                 <ButtonGroup>
                     {pages.map((item) => (
                         <Button

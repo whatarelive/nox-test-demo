@@ -1,15 +1,15 @@
-import Image from "next/image";
-import { Box, Container, Heading, Text, VStack, HStack, Link as ChakraLink } from '@chakra-ui/react'
 import Link from "next/link";
+import Image from "next/image";
+import {Box, Container, Heading, Text, VStack, HStack, Link as ChakraLink, Grid, Flex} from '@chakra-ui/react'
 
 export default function DashBoard() {
     return (
         <Box minHeight="100vh" bg='#F9FAF8' borderTopLeftRadius='50px' py={12}>
-            <Container maxW="container.md">
+            <Container maxW="container.sm" px='10px'>
                 <VStack spacing={8} align="stretch">
                     <Box bg='gray.100' p={8} borderRadius="lg" boxShadow="md">
                         <HStack spacing={6} align="start">
-                            <HStack alignItems='center' spacing={3}>
+                            <Flex direction={{ base:'column', md:'row' }} alignItems='center' gap='10px'>
                                 <Image
                                     src="https://avatars.githubusercontent.com/u/128400552"
                                     alt="Foto del Autor"
@@ -28,7 +28,7 @@ export default function DashBoard() {
                                         a la prueba técnica para el puesto de programador web.
                                     </Text>
                                 </VStack>
-                            </HStack>
+                            </Flex>
                         </HStack>
                     </Box>
 
@@ -38,22 +38,22 @@ export default function DashBoard() {
                         </Heading>
                         <HStack spacing={8} justify="center">
                             <VStack spacing={8} justify="center">
-                                <HStack>
+                                <Flex direction={{ base:'column', md:'row' }} gap={{ md: '10px' }} alignItems='center'>
                                     <Text fontWeight='bold'>Correo: </Text>
                                     <ChakraLink as="a" href='https://mail.google.com/mail/u/0/mailto:adriangutierrezmartinez378@gmail.com#inbox?compose=new'>
                                         adriangutierrezmartinez378@gmail.com
                                     </ChakraLink>
-                                </HStack>
-                                <HStack>
+                                </Flex>
+                                <Flex direction={{ base:'column', md:'row' }} gap={{ md: '10px' }} alignItems='center'>
                                     <Text fontWeight='bold'>Teléfono: </Text>
                                     <Text>+53 56575225</Text>
-                                </HStack>
-                                <HStack>
+                                </Flex>
+                                <Flex direction={{ base:'column', md:'row' }} gap={{ md: '10px' }} alignItems='center'>
                                     <Text fontWeight='bold'>Más trabajos en: </Text>
                                     <ChakraLink as="a" href="https://github.com/whatarelive" target='_blank'>
                                         Perfil de Github
                                     </ChakraLink>
-                                </HStack>
+                                </Flex>
                             </VStack>
                         </HStack>
                     </Box>
@@ -62,28 +62,15 @@ export default function DashBoard() {
                         <Heading textAlign='center' as="h2" size="lg" mb={4} >
                             Tecnologías
                         </Heading>
-                        <HStack spacing={8} justify="center">
+                        <Grid justifyContent="center" sx={{
+                            gap:{ base:'10px', md: '30px' },
+                            gridTemplateColumns: { base:'repeat(2, 64px)', md: 'repeat(4, 64px)' },
+                        }} >
                             <Image src='/react-svgrepo-com.svg' alt='Icono de React' width={64} height={64}/>
                             <Image src='/nextjs-icon-svgrepo-com.svg' alt='Icono de Next js' width={64} height={64}/>
                             <Image src='/chakraUi.svg' alt='Icono de Chakra Ui' width={64} height={64}/>
                             <Image src='/typescript-svgrepo-com.svg' alt='Icono de TypeScript' width={64} height={64}/>
-                        </HStack>
-                    </Box>
-
-                    <Box bg='gray.100' p={8} borderRadius="lg" boxShadow="md">
-                        <HStack spacing={6}>
-                            <VStack direction='column' spacing={3} alignItems="start" >
-                                <VStack >
-                                    <Heading as="h1" size="lg">Nota</Heading>
-                                </VStack>
-                                <VStack>
-                                    <Text>
-                                        La interfaz actual fue creada basandose en el diseño dado,
-                                        por lo tanto no esta adaptado completamente a resoluciones móviles.
-                                    </Text>
-                                </VStack>
-                            </VStack>
-                        </HStack>
+                        </Grid>
                     </Box>
 
                     <Box bg='gray.100' p={8} borderRadius="lg" boxShadow="md">

@@ -15,12 +15,19 @@ export default async function OrdersListPage() {
                         overflowX: 'auto',
                         borderRadius: '12px',
                         maxH: '375px',
+                        maxW: { base: '320px', md: 'full' }
                     }}>
                     <TableOrder/>
                 </TableScrollContainer>
             </CardBody>
 
-            <CardFooter flex='1' px='10px' py='12px' gap='10px'>
+            <CardFooter sx={{
+                    flex:'1',
+                    px:'10px',
+                    py:'12px',
+                    gap:'10px',
+                    justifyContent: 'space-between'
+                }}>
                 <Pagination/>
             </CardFooter>
          </Suspense>

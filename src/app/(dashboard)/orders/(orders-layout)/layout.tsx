@@ -15,9 +15,10 @@ export default function OrderLayout({ children }: Props) {
     return (
         <Flex direction='column' sx={{
             bg: '#F9FAF8',
-            borderTopLeftRadius: '50px',
-            padding: '60px',
-            gap: '20px'
+            gap: '20px',
+            py: { base:'40px', md:'60px' },
+            px: { base:'10px', md: '60px' },
+            borderTopLeftRadius: { md:'50px' },
         }} >
            <OrdersLayoutBadgeView/>
 

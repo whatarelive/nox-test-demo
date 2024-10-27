@@ -32,6 +32,8 @@ export function DetailsProductsCard({ products }: Props) {
                 <TableScrollContainer sx={{
                     p: '12px',
                     maxH: '168px',
+                    maxW: { base: '320px', md:'full' },
+                    overflowX: 'auto'
                 }}>
                     <Table variant="striped" >
                         <Thead>

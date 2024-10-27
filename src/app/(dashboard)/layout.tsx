@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { fonts } from "../ui/fonts/fonts";
 import { Grid, GridItem } from "@chakra-ui/react";
-import { Footer, NavBar, SideMenu } from "@/app/ui/components";
+import { Footer, NavBar, SideMenu, SideMenuMobile } from "@/app/ui/components";
 import { Providers } from './providers'
 
 import "../ui/styles/globals.css";
@@ -29,11 +29,14 @@ export default function RootLayout({ children }: Props ) {
                   gridTemplateColumns={{ base: 'auto auto', md: '280px auto' }}
               >
                   <GridItem
-                      maxW={{ base: '0px', md: '280px' }}
+                      maxW='280px'
                       display={{ base: 'none', md: 'flex' }} area={'nav'}
                   >
                       <SideMenu/>
                   </GridItem>
+
+                  <SideMenuMobile/>
+
                   <GridItem area={'page'} overflowY='auto' sx={{
                       '&::-webkit-scrollbar': {
                           width: '0px',

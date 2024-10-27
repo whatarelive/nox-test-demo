@@ -11,20 +11,27 @@ import {
     Avatar
 } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
-import {fonts} from "@/app/ui/fonts/fonts";
+import { fonts } from "@/app/ui/fonts/fonts";
+import { ButtonOpenDrawer } from "@/app/ui/components/buttons";
 
 export function ToolBar() {
     return (
-        <Flex direction='row' gap='10' alignItems="center" justifyContent='center'>
+        <Flex sx={{
+            gap:'10px',
+            alignItems:"center",
+            justifyContent: { base: 'space-between', md:'center' }
+        }}>
+            <ButtonOpenDrawer isDrawer={false} />
+
             <form>
                 <InputGroup size='md' variant='outline' sx={{
-                    width: '323px',
+                    width: { base: 'auto', md: '323px' },
                     height: '40px',
                     borderRadius: '20px',
                     border: '1px solid #E2E8F0',
                     paddingRight: '40px',
                     paddingLeft: '18px',
-                    gap: '10px'
+                    gap: '10px',
                 }}>
                     <InputRightElement>
                         <Search2Icon color='gray.300' />
@@ -43,11 +50,10 @@ export function ToolBar() {
                     />
                 </InputGroup>
             </form>
-
+            
             <ButtonGroup variant='outline' sx={{
                     width: '170px',
                     height: '45px',
-                    justifyItems:'center',
                     alignItems:'center',
                 }}>
                 <Button sx={{ p: '5px', bg: '#EDF2F7', border: 'none', borderRadius: '50px' }}>

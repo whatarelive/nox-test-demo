@@ -1,14 +1,31 @@
 'use client'
 
-import { IconButton } from "@chakra-ui/react";
-// import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { usePathname, useRouter } from "next/navigation";
+import { IconButton, SystemCSSProperties } from "@chakra-ui/react";
+import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 
-export function ButtonOpenDrawer() {
+interface Props {
+    isDrawer: boolean;
+    sx?: SystemCSSProperties;
+}
+
+export function ButtonOpenDrawer({ isDrawer, sx }: Props) {
+    const pathname = usePathname();
+    const router = useRouter();
+
+    const handlerClick = () => {
+        return isDrawer ? router.back() : router.push(`${pathname}?drawer=true`);
+    }
+
     return (
         <IconButton
-            // icon={  <CloseIcon/> : <HamburgerIcon/>}
+            icon={ isDrawer ? <CloseIcon /> : <HamburgerIcon /> }
             aria-label='Icon Hamburger'
-            onClick={() => {}}
+            sx={{
+                ...sx,
+                display: isDrawer ? 'flex' : { md: 'none' }
+            }}
+            onClick={handlerClick}
         />
     );
 }
