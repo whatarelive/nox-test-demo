@@ -4,7 +4,7 @@ import {Box, Container, Heading, Text, VStack, HStack, Link as ChakraLink, Grid,
 
 export default function DashBoard() {
     return (
-        <Box minHeight="100vh" bg='#F9FAF8' borderTopLeftRadius='50px' py={12}>
+        <Box minHeight="100vh" bg='#F9FAF8' borderTopLeftRadius={{ md:'50px' }} py={12}>
             <Container maxW="container.sm" px='10px'>
                 <VStack spacing={8} align="stretch">
                     <Box bg='gray.100' p={8} borderRadius="lg" boxShadow="md">

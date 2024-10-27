@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { fonts } from "../ui/fonts/fonts";
 import { Grid, GridItem } from "@chakra-ui/react";
 import { Footer, NavBar, SideMenu, SideMenuMobile } from "@/app/ui/components";
-import { SkeletonSideMenuMobile } from "@/app/ui/skeletons";
 import { Providers } from './providers'
 
 import "../ui/styles/globals.css";
@@ -17,7 +16,7 @@ interface Props {
   readonly children: React.ReactNode;
 }
 
-export default function RootLayout({ children }: Props ) {
+export default async function RootLayout({ children }: Props ) {
   return (
     <html lang="en" >
       <body className={`${fonts.poppins.className}`}>
@@ -36,7 +35,7 @@ export default function RootLayout({ children }: Props ) {
                       <SideMenu/>
                   </GridItem>
 
-                  <Suspense fallback={ <SkeletonSideMenuMobile/> }>
+                  <Suspense>
                     <SideMenuMobile/>
                   </Suspense>
 

@@ -2,7 +2,7 @@ import { Flex, HStack, Skeleton, SkeletonCircle, SkeletonText, VStack} from "@ch
 
 export function SkeletonSideMenuMobile() {
    return (
-       <VStack maxW='250px' direction='column' p={0}>
+       <VStack position='absolute' bg='#FFFFF' display={{ md: 'none' }} maxW='250px' direction='column' p={0}>
            <Flex ml='200px' my='12px'>
                <SkeletonCircle w="24px" h="24px" />
            </Flex>
