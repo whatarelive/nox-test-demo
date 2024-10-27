@@ -1,4 +1,4 @@
-import {FormControl, FormLabel, HStack, Input, Select, Stack, Text} from "@chakra-ui/react";
+import {FormControl, HStack, Input, Select, Stack, Text} from "@chakra-ui/react";
 
 
 export function FilterTable() {
